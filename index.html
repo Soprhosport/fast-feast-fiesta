@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fast Feast Fiesta — Fasting Coaching</title>
-<meta name="description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted — with evidence-based fasting protocols and a mindset-first approach.">
+<title>Fast Feast Fiesta — FLAG Certified Fasting Coach</title>
+<meta name="description" content="Personalised fasting coaching from a FLAG (Fasting Like A Girl) certified coach. Evidence-based protocols built around women's hormones and cycles — not generic advice.">
 <link rel="canonical" href="https://fast-feast-fiesta.netlify.app/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fast-feast-fiesta.netlify.app/">
-<meta property="og:title" content="Fast Feast Fiesta — Fasting Coaching">
-<meta property="og:description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted.">
+<meta property="og:title" content="Fast Feast Fiesta — FLAG Certified Fasting Coach">
+<meta property="og:description" content="Personalised fasting coaching from a FLAG certified coach. Built around women's biology, not generic advice.">
 <meta property="og:site_name" content="Fast Feast Fiesta">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fast Feast Fiesta — Fasting Coaching">
-<meta name="twitter:description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted.">
+<meta name="twitter:title" content="Fast Feast Fiesta — FLAG Certified Fasting Coach">
+<meta name="twitter:description" content="Personalised fasting coaching from a FLAG certified coach. Built around women's biology, not generic advice.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
   "name": "Fast Feast Fiesta",
-  "description": "Personalised fasting coaching combining evidence-based fasting protocols with a mindset-first approach.",
+  "description": "FLAG certified fasting coaching combining evidence-based fasting protocols with a mindset-first approach, specialising in women's hormonal health.",
   "url": "https://fast-feast-fiesta.netlify.app/",
   "email": "contact@sophrology.coach",
   "sameAs": ["https://sophrosport.coach"],
@@ -83,6 +83,7 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3.5rem; }
   .about-badges { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
   .badge { background: var(--cream); border: 1.5px solid rgba(0,0,0,0.08); border-radius: 50px; padding: 7px 16px; font-size: 0.85rem; font-weight: 600; color: var(--deep); }
+  .badge.flag { background: rgba(255,107,74,0.1); border-color: var(--coral); color: var(--coral); }
   .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .stat-card { background: var(--cream); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
   .stat-card.highlight { background: var(--coral); color: white; }
@@ -93,6 +94,18 @@
   .stat-wide { grid-column: span 2; background: var(--teal); color: white; border-radius: var(--radius); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
   .stat-wide .stat-num { color: white; font-size: 1.6rem; }
   .stat-wide .stat-label { color: rgba(255,255,255,0.85); }
+  /* FLAG CERT SECTION */
+  #flag-cert { background: linear-gradient(135deg, #FFF0E6 0%, #E8FBF9 100%); padding: 70px 2rem; }
+  .flag-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: center; }
+  .flag-badge-wrap { text-align: center; }
+  .flag-badge { width: 130px; height: 130px; background: var(--coral); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem; box-shadow: 0 8px 32px rgba(255,107,74,0.4); }
+  .flag-badge-title { font-size: 1rem; font-weight: 800; color: var(--deep); }
+  .flag-badge-sub { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+  .flag-points { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.6rem; }
+  .flag-point { background: white; border-radius: 12px; padding: 1rem 1.2rem; display: flex; gap: 0.7rem; align-items: flex-start; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .flag-point-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .flag-point strong { display: block; font-size: 0.88rem; color: var(--deep); }
+  .flag-point span { font-size: 0.82rem; color: var(--muted); }
   #services { background: var(--cream); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3.5rem; }
   .service-card { background: white; border-radius: var(--radius); padding: 2rem; border: 1.5px solid rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
@@ -175,6 +188,8 @@
     .hamburger { display: flex; }
     .form-row { grid-template-columns: 1fr; }
     .about-visual { grid-template-columns: 1fr 1fr; }
+    .flag-inner { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .flag-points { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -184,7 +199,8 @@
   <a href="#home" class="nav-logo">Fast Feast <span>Fiesta</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="#flag-cert">Certification</a></li>
+    <li><a href="#services">Programmes</a></li>
     <li><a href="#how">How it works</a></li>
     <li><a href="#sister">Sophrosport</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -200,16 +216,16 @@
   <div class="hero-bg-shape s2"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">🎉 Fasting Coaching That Works</div>
+      <div class="hero-eyebrow">🏅 FLAG Certified Fasting Coach</div>
       <h1 class="hero-title">Fast. <span class="accent">Feast.</span><br><span class="accent2">Celebrate.</span><br>Repeat.</h1>
-      <p class="hero-sub">Personalised fasting coaching that fits your real life — not the other way around. Build the relationship with food and your body you've always wanted.</p>
+      <p class="hero-sub">Personalised fasting coaching built around women's biology — not generic advice. Find the approach that fits your hormones, your cycle, and your real life.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">Start your journey</a>
         <a href="#services" class="btn-secondary">See programmes</a>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-card"><div class="hero-card-icon c1">⚡</div><div class="hero-card-text"><strong>Personalised plans</strong><span>Tailored to your schedule &amp; goals</span></div></div>
+      <div class="hero-card"><div class="hero-card-icon c1">🏅</div><div class="hero-card-text"><strong>FLAG Certified Coach</strong><span>Fasting Like A Girl — women's specialist</span></div></div>
       <div class="hero-card"><div class="hero-card-icon c2">🌿</div><div class="hero-card-text"><strong>Holistic approach</strong><span>Body, mind &amp; lifestyle in harmony</span></div></div>
       <div class="hero-card"><div class="hero-card-icon c3">🎯</div><div class="hero-card-text"><strong>Real results</strong><span>Sustainable, feel-good transformation</span></div></div>
     </div>
@@ -225,6 +241,7 @@
         <p class="section-sub">At Fast Feast Fiesta, we believe fasting should feel empowering, joyful, and completely doable. No guilt. No extremes. Just a smarter way to nourish yourself.</p>
         <p style="margin-top:1rem; font-size:0.95rem; color:var(--muted);">We combine evidence-based fasting protocols with a mindset-first approach — helping you build a way of eating that's sustainable for life, not just the next 30 days.</p>
         <div class="about-badges">
+          <span class="badge flag">🏅 FLAG Certified Coach</span>
           <span class="badge">Intermittent fasting</span>
           <span class="badge">Extended fasting</span>
           <span class="badge">Intuitive eating</span>
@@ -238,7 +255,28 @@
         <div class="stat-card highlight"><div class="stat-num">93%</div><div class="stat-label">Report lasting results</div></div>
         <div class="stat-card"><div class="stat-num">5★</div><div class="stat-label">Average rating</div></div>
         <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Years experience</div></div>
-        <div class="stat-wide"><div><div class="stat-num">🏆</div></div><div><div class="stat-label" style="color:white;">Certified fasting &amp; wellness coach — combining fasting expertise with sophrology for a truly whole-person approach.</div></div></div>
+        <div class="stat-wide"><div><div class="stat-num">🏅</div></div><div><div class="stat-label" style="color:white;">FLAG Certified Coach — trained in women's hormonal health, cycle syncing &amp; fasting protocols built for the female body.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="flag-cert">
+  <div class="flag-inner">
+    <div class="flag-badge-wrap">
+      <div class="flag-badge">🏅</div>
+      <div class="flag-badge-title">FLAG Certified</div>
+      <div class="flag-badge-sub">Fasting Like A Girl</div>
+    </div>
+    <div>
+      <span class="section-label">Why certification matters</span>
+      <h2 class="section-title">Trained in women's fasting — not just fasting</h2>
+      <p style="font-size:0.97rem; color:var(--muted); line-height:1.8; margin-bottom:1.6rem;">As a <strong style="color:var(--deep);">FLAG (Fasting Like A Girl) Certified Coach</strong>, I'm specifically trained in how women's hormones, cycles, and metabolic needs affect fasting. Most generic fasting advice is based on male biology — FLAG certification means your programme is built around <em>your</em> body.</p>
+      <div class="flag-points">
+        <div class="flag-point"><div class="flag-point-icon">🔬</div><div><strong>Science-backed</strong><span>Evidence-based protocols designed for female hormonal health</span></div></div>
+        <div class="flag-point"><div class="flag-point-icon">🌙</div><div><strong>Cycle-aware</strong><span>Fasting plans that work with your cycle, not against it</span></div></div>
+        <div class="flag-point"><div class="flag-point-icon">⚖️</div><div><strong>Hormone-friendly</strong><span>Protecting thyroid, cortisol &amp; reproductive health</span></div></div>
+        <div class="flag-point"><div class="flag-point-icon">🎓</div><div><strong>Specialist training</strong><span>Dedicated women's fasting certification — not a generic course</span></div></div>
       </div>
     </div>
   </div>
@@ -248,12 +286,12 @@
   <div class="container">
     <span class="section-label">Programmes</span>
     <h2 class="section-title">Find your fasting style</h2>
-    <p class="section-sub">Whether you're just curious about fasting or ready for a deep transformation, there's a programme for you.</p>
+    <p class="section-sub">Whether you're just curious about fasting or ready for a deep transformation, there's a programme for you — all designed using FLAG-certified women's fasting principles.</p>
     <div class="services-grid">
       <div class="service-card"><div class="service-icon i1">🌅</div><h3>Fasting Foundations</h3><p>The perfect starting point. Learn the basics of intermittent fasting, find the protocol that suits your life, and build real confidence and consistency.</p><div class="service-price">4-week programme · 1:1 coaching</div></div>
       <div class="service-card"><div class="service-icon i2">🔄</div><h3>Reset &amp; Renew</h3><p>A guided reset combining extended fasting windows with gut-healing nutrition. Perfect if you're feeling stuck, bloated, or just ready for a fresh start.</p><div class="service-price">6-week programme · Weekly check-ins</div></div>
       <div class="service-card"><div class="service-icon i3">✨</div><h3>Fiesta Lifestyle</h3><p>Our signature ongoing coaching programme. Fasting, feasting, and everything in between — with full support to make this a way of life, not a diet.</p><div class="service-price">3-month programme · Unlimited support</div></div>
-      <div class="service-card"><div class="service-icon i4">👥</div><h3>Group Fasting Circles</h3><p>Community-powered fasting. Join a small group of like-minded people, share your journey, and fast together with guided weekly sessions.</p><div class="service-price">Monthly membership · Group calls</div></div>
+      <div class="service-card"><div class="service-icon i4">👥</div><h3>Group Fasting Circles</h3><p>Community-powered fasting. Join a small group of like-minded women, share your journey, and fast together with guided weekly sessions.</p><div class="service-price">Monthly membership · Group calls</div></div>
     </div>
   </div>
 </section>
@@ -265,7 +303,7 @@
     <p class="section-sub">Getting started is easy. Here's what to expect when you work with Fast Feast Fiesta.</p>
     <div class="steps">
       <div class="step"><div class="step-num">1</div><h3>Free discovery call</h3><p>We start with a no-pressure chat about your goals, lifestyle, and what fasting approach could work best for you.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Your personal plan</h3><p>You receive a tailored fasting protocol, meal timing guide, and mindset toolkit — built around your real life.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Your personal plan</h3><p>You receive a tailored fasting protocol, meal timing guide, and mindset toolkit — built around your real life and cycle.</p></div>
       <div class="step"><div class="step-num">3</div><h3>Guided support</h3><p>Regular check-ins, WhatsApp support, and adjustments as you go. You're never doing this alone.</p></div>
       <div class="step"><div class="step-num">4</div><h3>Fast, feast, celebrate</h3><p>Build the habits that stick — and celebrate every win along the way. This is your Fiesta moment.</p></div>
     </div>
@@ -339,14 +377,14 @@
     <div class="footer-top">
       <div>
         <div class="footer-brand">Fast Feast <span>Fiesta</span></div>
-        <p class="footer-tagline">Fasting coaching that celebrates you — your pace, your life, your results.</p>
+        <p class="footer-tagline">FLAG certified fasting coaching that celebrates you — your hormones, your cycle, your results.</p>
         <p style="margin-top:1rem; font-size:0.82rem;">Part of the <a href="https://sophrosport.coach" target="_blank" style="color:var(--teal); text-decoration:none;">Sophrosport</a> family of mind-body wellness brands.</p>
       </div>
-      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Programmes</a></li><li><a href="#how">How it works</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#flag-cert">Certification</a></li><li><a href="#services">Programmes</a></li><li><a href="#how">How it works</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Programmes</h4><ul><li><a href="#services">Fasting Foundations</a></li><li><a href="#services">Reset &amp; Renew</a></li><li><a href="#services">Fiesta Lifestyle</a></li><li><a href="#services">Group Circles</a></li><li><a href="https://sophrosport.coach" target="_blank">Sophrosport →</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Fast Feast Fiesta. All rights reserved.</p>
+      <p>© 2026 Fast Feast Fiesta. All rights reserved. FLAG Certified Coach.</p>
       <a href="https://sophrosport.coach" target="_blank" rel="noopener" class="footer-sister-link">Visit our sister brand: Sophrosport.coach →</a>
     </div>
   </div>
