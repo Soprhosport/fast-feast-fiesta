@@ -4,9 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fast Feast Fiesta — Fasting Coaching</title>
+<meta name="description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted — with evidence-based fasting protocols and a mindset-first approach.">
+<link rel="canonical" href="https://fast-feast-fiesta.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fast-feast-fiesta.netlify.app/">
+<meta property="og:title" content="Fast Feast Fiesta — Fasting Coaching">
+<meta property="og:description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted.">
+<meta property="og:site_name" content="Fast Feast Fiesta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fast Feast Fiesta — Fasting Coaching">
+<meta name="twitter:description" content="Personalised fasting coaching that fits your real life. Build the relationship with food and your body you've always wanted.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Fast Feast Fiesta",
+  "description": "Personalised fasting coaching combining evidence-based fasting protocols with a mindset-first approach.",
+  "url": "https://fast-feast-fiesta.netlify.app/",
+  "email": "contact@sophrology.coach",
+  "sameAs": ["https://sophrosport.coach"],
+  "serviceType": "Fasting Coaching",
+  "priceRange": "££"
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --coral: #FF6B4A;
     --gold: #F5A623;
@@ -17,140 +39,52 @@
     --muted: #6B6B7B;
     --radius: 14px;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    color: var(--text);
-    background: var(--cream);
-    line-height: 1.7;
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    background: rgba(255,249,242,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-    z-index: 100;
-    padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-  }
-  .nav-logo {
-    font-size: 1.25rem; font-weight: 700; color: var(--coral);
-    text-decoration: none; letter-spacing: -0.3px;
-  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--cream); line-height: 1.7; }
+  nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,249,242,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.07); z-index: 100; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--coral); text-decoration: none; letter-spacing: -0.3px; }
   .nav-logo span { color: var(--teal); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    text-decoration: none; color: var(--text); font-size: 0.95rem;
-    font-weight: 500; transition: color 0.2s;
-  }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--coral); }
-  .nav-cta {
-    background: var(--coral); color: white; border: none;
-    padding: 9px 22px; border-radius: 50px; font-size: 0.9rem;
-    font-weight: 600; cursor: pointer; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
+  .nav-cta { background: var(--coral); color: white; border: none; padding: 9px 22px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; }
   .nav-cta:hover { background: #e85a38; transform: translateY(-1px); }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
-
-  /* ── HERO ── */
-  #home {
-    min-height: 100vh; display: flex; align-items: center;
-    padding: 100px 2rem 60px;
-    background: linear-gradient(135deg, #FFF9F2 0%, #FFF0E6 60%, #E8FBF9 100%);
-    position: relative; overflow: hidden;
-  }
-  .hero-bg-shape {
-    position: absolute; border-radius: 50%; opacity: 0.12;
-    pointer-events: none;
-  }
+  #home { min-height: 100vh; display: flex; align-items: center; padding: 100px 2rem 60px; background: linear-gradient(135deg, #FFF9F2 0%, #FFF0E6 60%, #E8FBF9 100%); position: relative; overflow: hidden; }
+  .hero-bg-shape { position: absolute; border-radius: 50%; opacity: 0.12; pointer-events: none; }
   .hero-bg-shape.s1 { width: 500px; height: 500px; background: var(--coral); top: -150px; right: -100px; }
   .hero-bg-shape.s2 { width: 300px; height: 300px; background: var(--teal); bottom: -80px; left: -80px; }
   .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-  .hero-eyebrow {
-    display: inline-block; background: rgba(255,107,74,0.12); color: var(--coral);
-    padding: 5px 14px; border-radius: 50px; font-size: 0.82rem; font-weight: 600;
-    letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.2rem;
-  }
-  .hero-title {
-    font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.1;
-    color: var(--deep); letter-spacing: -1px; margin-bottom: 1.4rem;
-  }
+  .hero-eyebrow { display: inline-block; background: rgba(255,107,74,0.12); color: var(--coral); padding: 5px 14px; border-radius: 50px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .hero-title { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.1; color: var(--deep); letter-spacing: -1px; margin-bottom: 1.4rem; }
   .hero-title .accent { color: var(--coral); }
   .hero-title .accent2 { color: var(--teal); }
-  .hero-sub {
-    font-size: 1.1rem; color: var(--muted); margin-bottom: 2.2rem; max-width: 480px;
-  }
+  .hero-sub { font-size: 1.1rem; color: var(--muted); margin-bottom: 2.2rem; max-width: 480px; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--coral); color: white; padding: 14px 30px;
-    border-radius: 50px; font-weight: 700; font-size: 1rem;
-    text-decoration: none; transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(255,107,74,0.35);
-  }
+  .btn-primary { background: var(--coral); color: white; padding: 14px 30px; border-radius: 50px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 20px rgba(255,107,74,0.35); }
   .btn-primary:hover { background: #e85a38; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,107,74,0.45); }
-  .btn-secondary {
-    background: transparent; color: var(--deep); padding: 14px 30px;
-    border-radius: 50px; font-weight: 600; font-size: 1rem;
-    text-decoration: none; border: 2px solid rgba(0,0,0,0.15);
-    transition: all 0.2s;
-  }
+  .btn-secondary { background: transparent; color: var(--deep); padding: 14px 30px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid rgba(0,0,0,0.15); transition: all 0.2s; }
   .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
-
-  .hero-visual {
-    display: flex; flex-direction: column; gap: 1rem; align-items: flex-end;
-  }
-  .hero-card {
-    background: white; border-radius: var(--radius); padding: 1.4rem 1.6rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%; max-width: 340px;
-    display: flex; align-items: center; gap: 1rem;
-  }
-  .hero-card-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; flex-shrink: 0;
-  }
+  .hero-visual { display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; }
+  .hero-card { background: white; border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%; max-width: 340px; display: flex; align-items: center; gap: 1rem; }
+  .hero-card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
   .hero-card-icon.c1 { background: rgba(255,107,74,0.12); }
   .hero-card-icon.c2 { background: rgba(45,191,173,0.12); }
   .hero-card-icon.c3 { background: rgba(245,166,35,0.12); }
   .hero-card-text strong { display: block; font-size: 0.95rem; color: var(--deep); }
   .hero-card-text span { font-size: 0.82rem; color: var(--muted); }
-
-  /* ── SECTION GENERIC ── */
   section { padding: 90px 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem;
-  }
-  .section-title {
-    font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800;
-    color: var(--deep); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 1.2rem;
-  }
+  .section-label { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 0.8rem; }
+  .section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; color: var(--deep); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 1.2rem; }
   .section-sub { font-size: 1.05rem; color: var(--muted); max-width: 560px; }
-
-  /* ── ABOUT ── */
   #about { background: white; }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3.5rem; }
   .about-badges { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
-  .badge {
-    background: var(--cream); border: 1.5px solid rgba(0,0,0,0.08);
-    border-radius: 50px; padding: 7px 16px; font-size: 0.85rem;
-    font-weight: 600; color: var(--deep);
-  }
-  .about-visual {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-  }
-  .stat-card {
-    background: var(--cream); border-radius: var(--radius); padding: 1.5rem;
-    text-align: center;
-  }
+  .badge { background: var(--cream); border: 1.5px solid rgba(0,0,0,0.08); border-radius: 50px; padding: 7px 16px; font-size: 0.85rem; font-weight: 600; color: var(--deep); }
+  .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { background: var(--cream); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
   .stat-card.highlight { background: var(--coral); color: white; }
   .stat-card.highlight .stat-label { color: rgba(255,255,255,0.8); }
   .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--coral); line-height: 1; }
@@ -159,100 +93,53 @@
   .stat-wide { grid-column: span 2; background: var(--teal); color: white; border-radius: var(--radius); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
   .stat-wide .stat-num { color: white; font-size: 1.6rem; }
   .stat-wide .stat-label { color: rgba(255,255,255,0.85); }
-
-  /* ── SERVICES ── */
   #services { background: var(--cream); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3.5rem; }
-  .service-card {
-    background: white; border-radius: var(--radius); padding: 2rem;
-    border: 1.5px solid rgba(0,0,0,0.06);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+  .service-card { background: white; border-radius: var(--radius); padding: 2rem; border: 1.5px solid rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
   .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-  .service-icon {
-    width: 52px; height: 52px; border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; margin-bottom: 1.2rem;
-  }
+  .service-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
   .service-icon.i1 { background: rgba(255,107,74,0.12); }
   .service-icon.i2 { background: rgba(45,191,173,0.12); }
   .service-icon.i3 { background: rgba(245,166,35,0.12); }
   .service-icon.i4 { background: rgba(26,26,46,0.08); }
   .service-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--deep); margin-bottom: 0.6rem; }
   .service-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
-  .service-price {
-    margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,0.07);
-    font-size: 0.88rem; font-weight: 600; color: var(--coral);
-  }
-
-  /* ── HOW IT WORKS ── */
+  .service-price { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,0.07); font-size: 0.88rem; font-weight: 600; color: var(--coral); }
   #how { background: white; }
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
   .step { text-align: center; padding: 2rem 1.5rem; }
-  .step-num {
-    width: 56px; height: 56px; border-radius: 50%;
-    background: var(--deep); color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem; font-weight: 800; margin: 0 auto 1.2rem;
-  }
+  .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--deep); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 1.2rem; }
   .step:nth-child(1) .step-num { background: var(--coral); }
   .step:nth-child(2) .step-num { background: var(--teal); }
   .step:nth-child(3) .step-num { background: var(--gold); }
   .step:nth-child(4) .step-num { background: var(--deep); }
   .step h3 { font-size: 1.05rem; font-weight: 700; color: var(--deep); margin-bottom: 0.5rem; }
   .step p { font-size: 0.9rem; color: var(--muted); }
-
-  /* ── SISTER BRAND ── */
-  #sister {
-    background: linear-gradient(135deg, var(--deep) 0%, #16213E 100%);
-    color: white;
-  }
-  .sister-inner {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-  }
+  #sister { background: linear-gradient(135deg, var(--deep) 0%, #16213E 100%); color: white; }
+  .sister-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .sister-label { color: var(--teal); }
   .sister-title { color: white; }
   .sister-sub { color: rgba(255,255,255,0.7); }
-  .sister-card {
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius); padding: 2.2rem;
-  }
-  .sister-card-logo {
-    font-size: 1.5rem; font-weight: 800; color: var(--teal); margin-bottom: 0.8rem;
-  }
+  .sister-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 2.2rem; }
+  .sister-card-logo { font-size: 1.5rem; font-weight: 800; color: var(--teal); margin-bottom: 0.8rem; }
   .sister-card p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.6rem; }
   .sister-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.8rem; }
   .sister-card ul li { font-size: 0.9rem; color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 0.6rem; }
   .sister-card ul li::before { content: "✦"; color: var(--teal); font-size: 0.7rem; }
-  .btn-teal {
-    display: inline-block; background: var(--teal); color: white;
-    padding: 12px 26px; border-radius: 50px; font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; transition: all 0.2s;
-    box-shadow: 0 4px 16px rgba(45,191,173,0.4);
-  }
+  .btn-teal { display: inline-block; background: var(--teal); color: white; padding: 12px 26px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 16px rgba(45,191,173,0.4); }
   .btn-teal:hover { background: #25a898; transform: translateY(-2px); }
-
-  /* ── TESTIMONIALS ── */
   #testimonials { background: var(--cream); }
   .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-  .testi-card {
-    background: white; border-radius: var(--radius); padding: 1.8rem;
-    border: 1.5px solid rgba(0,0,0,0.06);
-  }
+  .testi-card { background: white; border-radius: var(--radius); padding: 1.8rem; border: 1.5px solid rgba(0,0,0,0.06); }
   .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
   .testi-card blockquote { font-size: 0.95rem; color: var(--text); line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
   .testi-author { font-size: 0.85rem; font-weight: 700; color: var(--deep); }
   .testi-role { font-size: 0.8rem; color: var(--muted); }
-
-  /* ── CONTACT ── */
   #contact { background: white; }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; align-items: start; }
   .contact-info { display: flex; flex-direction: column; gap: 1.4rem; }
   .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
-  .contact-icon {
-    width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
-  }
+  .contact-icon { width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
   .contact-icon.ci1 { background: rgba(255,107,74,0.12); }
   .contact-icon.ci2 { background: rgba(45,191,173,0.12); }
   .contact-icon.ci3 { background: rgba(245,166,35,0.12); }
@@ -260,20 +147,11 @@
   .contact-item a, .contact-item span { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
   .contact-item a:hover { color: var(--coral); }
   form { display: flex; flex-direction: column; gap: 1rem; }
-  input, textarea, select {
-    padding: 12px 16px; border: 1.5px solid rgba(0,0,0,0.1);
-    border-radius: 10px; font-size: 0.95rem; font-family: inherit;
-    color: var(--text); background: var(--cream); transition: border-color 0.2s;
-    width: 100%;
-  }
+  input, textarea, select { padding: 12px 16px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: 10px; font-size: 0.95rem; font-family: inherit; color: var(--text); background: var(--cream); transition: border-color 0.2s; width: 100%; }
   input:focus, textarea:focus, select:focus { outline: none; border-color: var(--teal); }
   textarea { resize: vertical; min-height: 120px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--deep); color: rgba(255,255,255,0.65); padding: 50px 2rem 30px;
-  }
+  footer { background: var(--deep); color: rgba(255,255,255,0.65); padding: 50px 2rem 30px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; }
   .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2rem; }
   .footer-brand { font-size: 1.2rem; font-weight: 800; color: var(--coral); margin-bottom: 0.8rem; }
@@ -287,8 +165,6 @@
   .footer-bottom p { font-size: 0.82rem; }
   .footer-sister-link { font-size: 0.85rem; color: var(--teal); text-decoration: none; font-weight: 600; }
   .footer-sister-link:hover { text-decoration: underline; }
-
-  /* ── MOBILE ── */
   @media (max-width: 768px) {
     .hero-inner { grid-template-columns: 1fr; }
     .hero-visual { align-items: stretch; }
@@ -304,7 +180,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">Fast Feast <span>Fiesta</span></a>
   <ul class="nav-links">
@@ -320,18 +195,13 @@
   </button>
 </nav>
 
-<!-- HERO -->
 <section id="home">
   <div class="hero-bg-shape s1"></div>
   <div class="hero-bg-shape s2"></div>
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">🎉 Fasting Coaching That Works</div>
-      <h1 class="hero-title">
-        Fast. <span class="accent">Feast.</span><br>
-        <span class="accent2">Celebrate.</span><br>
-        Repeat.
-      </h1>
+      <h1 class="hero-title">Fast. <span class="accent">Feast.</span><br><span class="accent2">Celebrate.</span><br>Repeat.</h1>
       <p class="hero-sub">Personalised fasting coaching that fits your real life — not the other way around. Build the relationship with food and your body you've always wanted.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">Start your journey</a>
@@ -339,32 +209,13 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-card">
-        <div class="hero-card-icon c1">⚡</div>
-        <div class="hero-card-text">
-          <strong>Personalised plans</strong>
-          <span>Tailored to your schedule &amp; goals</span>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-card-icon c2">🌿</div>
-        <div class="hero-card-text">
-          <strong>Holistic approach</strong>
-          <span>Body, mind &amp; lifestyle in harmony</span>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-card-icon c3">🎯</div>
-        <div class="hero-card-text">
-          <strong>Real results</strong>
-          <span>Sustainable, feel-good transformation</span>
-        </div>
-      </div>
+      <div class="hero-card"><div class="hero-card-icon c1">⚡</div><div class="hero-card-text"><strong>Personalised plans</strong><span>Tailored to your schedule &amp; goals</span></div></div>
+      <div class="hero-card"><div class="hero-card-icon c2">🌿</div><div class="hero-card-text"><strong>Holistic approach</strong><span>Body, mind &amp; lifestyle in harmony</span></div></div>
+      <div class="hero-card"><div class="hero-card-icon c3">🎯</div><div class="hero-card-text"><strong>Real results</strong><span>Sustainable, feel-good transformation</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
@@ -383,102 +234,44 @@
         </div>
       </div>
       <div class="about-visual">
-        <div class="stat-card">
-          <div class="stat-num">200+</div>
-          <div class="stat-label">Clients coached</div>
-        </div>
-        <div class="stat-card highlight">
-          <div class="stat-num">93%</div>
-          <div class="stat-label">Report lasting results</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">5★</div>
-          <div class="stat-label">Average rating</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">8+</div>
-          <div class="stat-label">Years experience</div>
-        </div>
-        <div class="stat-wide">
-          <div>
-            <div class="stat-num">🏆</div>
-          </div>
-          <div>
-            <div class="stat-label" style="color:white;">Certified fasting &amp; wellness coach — combining fasting expertise with sophrology for a truly whole-person approach.</div>
-          </div>
-        </div>
+        <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">Clients coached</div></div>
+        <div class="stat-card highlight"><div class="stat-num">93%</div><div class="stat-label">Report lasting results</div></div>
+        <div class="stat-card"><div class="stat-num">5★</div><div class="stat-label">Average rating</div></div>
+        <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Years experience</div></div>
+        <div class="stat-wide"><div><div class="stat-num">🏆</div></div><div><div class="stat-label" style="color:white;">Certified fasting &amp; wellness coach — combining fasting expertise with sophrology for a truly whole-person approach.</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <span class="section-label">Programmes</span>
     <h2 class="section-title">Find your fasting style</h2>
     <p class="section-sub">Whether you're just curious about fasting or ready for a deep transformation, there's a programme for you.</p>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon i1">🌅</div>
-        <h3>Fasting Foundations</h3>
-        <p>The perfect starting point. Learn the basics of intermittent fasting, find the protocol that suits your life, and build real confidence and consistency.</p>
-        <div class="service-price">4-week programme · 1:1 coaching</div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon i2">🔄</div>
-        <h3>Reset &amp; Renew</h3>
-        <p>A guided reset combining extended fasting windows with gut-healing nutrition. Perfect if you're feeling stuck, bloated, or just ready for a fresh start.</p>
-        <div class="service-price">6-week programme · Weekly check-ins</div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon i3">✨</div>
-        <h3>Fiesta Lifestyle</h3>
-        <p>Our signature ongoing coaching programme. Fasting, feasting, and everything in between — with full support to make this a way of life, not a diet.</p>
-        <div class="service-price">3-month programme · Unlimited support</div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon i4">👥</div>
-        <h3>Group Fasting Circles</h3>
-        <p>Community-powered fasting. Join a small group of like-minded people, share your journey, and fast together with guided weekly sessions.</p>
-        <div class="service-price">Monthly membership · Group calls</div>
-      </div>
+      <div class="service-card"><div class="service-icon i1">🌅</div><h3>Fasting Foundations</h3><p>The perfect starting point. Learn the basics of intermittent fasting, find the protocol that suits your life, and build real confidence and consistency.</p><div class="service-price">4-week programme · 1:1 coaching</div></div>
+      <div class="service-card"><div class="service-icon i2">🔄</div><h3>Reset &amp; Renew</h3><p>A guided reset combining extended fasting windows with gut-healing nutrition. Perfect if you're feeling stuck, bloated, or just ready for a fresh start.</p><div class="service-price">6-week programme · Weekly check-ins</div></div>
+      <div class="service-card"><div class="service-icon i3">✨</div><h3>Fiesta Lifestyle</h3><p>Our signature ongoing coaching programme. Fasting, feasting, and everything in between — with full support to make this a way of life, not a diet.</p><div class="service-price">3-month programme · Unlimited support</div></div>
+      <div class="service-card"><div class="service-icon i4">👥</div><h3>Group Fasting Circles</h3><p>Community-powered fasting. Join a small group of like-minded people, share your journey, and fast together with guided weekly sessions.</p><div class="service-price">Monthly membership · Group calls</div></div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section id="how">
   <div class="container">
     <span class="section-label">How it works</span>
     <h2 class="section-title">Simple steps to transformation</h2>
     <p class="section-sub">Getting started is easy. Here's what to expect when you work with Fast Feast Fiesta.</p>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Free discovery call</h3>
-        <p>We start with a no-pressure chat about your goals, lifestyle, and what fasting approach could work best for you.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Your personal plan</h3>
-        <p>You receive a tailored fasting protocol, meal timing guide, and mindset toolkit — built around your real life.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Guided support</h3>
-        <p>Regular check-ins, WhatsApp support, and adjustments as you go. You're never doing this alone.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Fast, feast, celebrate</h3>
-        <p>Build the habits that stick — and celebrate every win along the way. This is your Fiesta moment.</p>
-      </div>
+      <div class="step"><div class="step-num">1</div><h3>Free discovery call</h3><p>We start with a no-pressure chat about your goals, lifestyle, and what fasting approach could work best for you.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Your personal plan</h3><p>You receive a tailored fasting protocol, meal timing guide, and mindset toolkit — built around your real life.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Guided support</h3><p>Regular check-ins, WhatsApp support, and adjustments as you go. You're never doing this alone.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Fast, feast, celebrate</h3><p>Build the habits that stick — and celebrate every win along the way. This is your Fiesta moment.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SISTER BRAND -->
 <section id="sister">
   <div class="container">
     <div class="sister-inner">
@@ -504,35 +297,18 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="container">
     <span class="section-label">Testimonials</span>
     <h2 class="section-title">Real people, real results</h2>
     <div class="testimonials-grid">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"I'd tried every diet going. Fast Feast Fiesta was the first approach that actually felt sustainable. I've lost 12kg and honestly feel like I've found my groove with food for the first time ever."</blockquote>
-        <div class="testi-author">Sarah M.</div>
-        <div class="testi-role">Fiesta Lifestyle programme</div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"The Reset &amp; Renew programme was a total game-changer. My gut issues that I'd had for years cleared up within three weeks. I honestly can't believe it."</blockquote>
-        <div class="testi-author">James T.</div>
-        <div class="testi-role">Reset &amp; Renew programme</div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"I was so intimidated by fasting before. The Foundations programme made it completely approachable. The weekly coaching calls were brilliant — so supportive and practical."</blockquote>
-        <div class="testi-author">Priya K.</div>
-        <div class="testi-role">Fasting Foundations programme</div>
-      </div>
+      <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I'd tried every diet going. Fast Feast Fiesta was the first approach that actually felt sustainable. I've lost 12kg and honestly feel like I've found my groove with food for the first time ever."</blockquote><div class="testi-author">Sarah M.</div><div class="testi-role">Fiesta Lifestyle programme</div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"The Reset &amp; Renew programme was a total game-changer. My gut issues that I'd had for years cleared up within three weeks. I honestly can't believe it."</blockquote><div class="testi-author">James T.</div><div class="testi-role">Reset &amp; Renew programme</div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><blockquote>"I was so intimidated by fasting before. The Foundations programme made it completely approachable. The weekly coaching calls were brilliant — so supportive and practical."</blockquote><div class="testi-author">Priya K.</div><div class="testi-role">Fasting Foundations programme</div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <span class="section-label">Get in touch</span>
@@ -540,44 +316,17 @@
     <p class="section-sub">Book your free discovery call or drop us a message. No commitment, no pressure — just a conversation.</p>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon ci1">📧</div>
-          <div>
-            <strong>Email</strong>
-            <a href="mailto:contact@sophrology.coach">contact@sophrology.coach</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon ci2">🌐</div>
-          <div>
-            <strong>Sister brand</strong>
-            <a href="https://sophrosport.coach" target="_blank" rel="noopener">sophrosport.coach</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon ci3">📅</div>
-          <div>
-            <strong>Discovery calls</strong>
-            <span>Free 30-minute consultation</span>
-          </div>
-        </div>
-        <div style="margin-top:1rem; padding:1.4rem; background:var(--cream); border-radius:var(--radius); border:1.5px solid rgba(0,0,0,0.07);">
-          <p style="font-size:0.92rem; color:var(--muted); line-height:1.7;"><strong style="color:var(--deep);">Not sure which programme is right for you?</strong><br>That's exactly what the discovery call is for. We'll figure it out together — and if fasting isn't the right fit, we'll tell you that too.</p>
-        </div>
+        <div class="contact-item"><div class="contact-icon ci1">📧</div><div><strong>Email</strong><a href="mailto:contact@sophrology.coach">contact@sophrology.coach</a></div></div>
+        <div class="contact-item"><div class="contact-icon ci2">🌐</div><div><strong>Sister brand</strong><a href="https://sophrosport.coach" target="_blank" rel="noopener">sophrosport.coach</a></div></div>
+        <div class="contact-item"><div class="contact-icon ci3">📅</div><div><strong>Discovery calls</strong><span>Free 30-minute consultation</span></div></div>
+        <div style="margin-top:1rem; padding:1.4rem; background:var(--cream); border-radius:var(--radius); border:1.5px solid rgba(0,0,0,0.07);"><p style="font-size:0.92rem; color:var(--muted); line-height:1.7;"><strong style="color:var(--deep);">Not sure which programme is right for you?</strong><br>That's exactly what the discovery call is for. We'll figure it out together — and if fasting isn't the right fit, we'll tell you that too.</p></div>
       </div>
       <form onsubmit="handleSubmit(event)">
         <div class="form-row">
           <input type="text" placeholder="Your name" required>
           <input type="email" placeholder="Email address" required>
         </div>
-        <select>
-          <option value="" disabled selected>Which programme interests you?</option>
-          <option>Fasting Foundations</option>
-          <option>Reset &amp; Renew</option>
-          <option>Fiesta Lifestyle</option>
-          <option>Group Fasting Circles</option>
-          <option>Not sure yet</option>
-        </select>
+        <select><option value="" disabled selected>Which programme interests you?</option><option>Fasting Foundations</option><option>Reset &amp; Renew</option><option>Fiesta Lifestyle</option><option>Group Fasting Circles</option><option>Not sure yet</option></select>
         <textarea placeholder="Tell me a little about your goals and where you're at right now..."></textarea>
         <button type="submit" class="btn-primary" style="border:none; cursor:pointer; text-align:center;">Send message 🎉</button>
       </form>
@@ -585,7 +334,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -594,26 +342,8 @@
         <p class="footer-tagline">Fasting coaching that celebrates you — your pace, your life, your results.</p>
         <p style="margin-top:1rem; font-size:0.82rem;">Part of the <a href="https://sophrosport.coach" target="_blank" style="color:var(--teal); text-decoration:none;">Sophrosport</a> family of mind-body wellness brands.</p>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Programmes</a></li>
-          <li><a href="#how">How it works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Programmes</h4>
-        <ul>
-          <li><a href="#services">Fasting Foundations</a></li>
-          <li><a href="#services">Reset &amp; Renew</a></li>
-          <li><a href="#services">Fiesta Lifestyle</a></li>
-          <li><a href="#services">Group Circles</a></li>
-          <li><a href="https://sophrosport.coach" target="_blank">Sophrosport →</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Programmes</a></li><li><a href="#how">How it works</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Programmes</h4><ul><li><a href="#services">Fasting Foundations</a></li><li><a href="#services">Reset &amp; Renew</a></li><li><a href="#services">Fiesta Lifestyle</a></li><li><a href="#services">Group Circles</a></li><li><a href="https://sophrosport.coach" target="_blank">Sophrosport →</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Fast Feast Fiesta. All rights reserved.</p>
@@ -631,6 +361,5 @@ function handleSubmit(e) {
   btn.disabled = true;
 }
 </script>
-
 </body>
 </html>
