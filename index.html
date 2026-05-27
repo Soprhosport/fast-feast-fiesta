@@ -83,7 +83,7 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3.5rem; }
   .about-badges { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
   .badge { background: var(--cream); border: 1.5px solid rgba(0,0,0,0.08); border-radius: 50px; padding: 7px 16px; font-size: 0.85rem; font-weight: 600; color: var(--deep); }
-  .badge.flag { background: rgba(255,107,74,0.1); border-color: var(--coral); color: var(--coral); }
+  .badge.flag { background: rgba(45,191,173,0.1); border-color: var(--teal); color: var(--teal); }
   .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .stat-card { background: var(--cream); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
   .stat-card.highlight { background: var(--coral); color: white; }
@@ -94,13 +94,10 @@
   .stat-wide { grid-column: span 2; background: var(--teal); color: white; border-radius: var(--radius); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
   .stat-wide .stat-num { color: white; font-size: 1.6rem; }
   .stat-wide .stat-label { color: rgba(255,255,255,0.85); }
-  /* FLAG CERT SECTION */
-  #flag-cert { background: linear-gradient(135deg, #FFF0E6 0%, #E8FBF9 100%); padding: 70px 2rem; }
-  .flag-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: center; }
+  #flag-cert { background: linear-gradient(135deg, #E8FBF9 0%, #FFF0E6 100%); padding: 70px 2rem; }
+  .flag-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 220px 1fr; gap: 4rem; align-items: center; }
   .flag-badge-wrap { text-align: center; }
-  .flag-badge { width: 130px; height: 130px; background: var(--coral); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1rem; box-shadow: 0 8px 32px rgba(255,107,74,0.4); }
-  .flag-badge-title { font-size: 1rem; font-weight: 800; color: var(--deep); }
-  .flag-badge-sub { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+  .flag-badge-wrap img { width: 180px; height: 180px; object-fit: contain; filter: drop-shadow(0 8px 24px rgba(45,191,173,0.3)); }
   .flag-points { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.6rem; }
   .flag-point { background: white; border-radius: 12px; padding: 1rem 1.2rem; display: flex; gap: 0.7rem; align-items: flex-start; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
   .flag-point-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
@@ -216,7 +213,7 @@
   <div class="hero-bg-shape s2"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">🏅 FLAG Certified Fasting Coach</div>
+      <div class="hero-eyebrow">🌿 FLAG Certified Fasting Coach</div>
       <h1 class="hero-title">Fast. <span class="accent">Feast.</span><br><span class="accent2">Celebrate.</span><br>Repeat.</h1>
       <p class="hero-sub">Personalised fasting coaching built around women's biology — not generic advice. Find the approach that fits your hormones, your cycle, and your real life.</p>
       <div class="hero-btns">
@@ -225,7 +222,10 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-card"><div class="hero-card-icon c1">🏅</div><div class="hero-card-text"><strong>FLAG Certified Coach</strong><span>Fasting Like A Girl — women's specialist</span></div></div>
+      <div class="hero-card">
+        <img src="FLAG_CERTIFIED_MARK.png" alt="Fast Like A Girl Certified" style="width:48px; height:48px; object-fit:contain; flex-shrink:0;">
+        <div class="hero-card-text"><strong>FLAG Certified Coach</strong><span>Fasting Like A Girl — women's specialist</span></div>
+      </div>
       <div class="hero-card"><div class="hero-card-icon c2">🌿</div><div class="hero-card-text"><strong>Holistic approach</strong><span>Body, mind &amp; lifestyle in harmony</span></div></div>
       <div class="hero-card"><div class="hero-card-icon c3">🎯</div><div class="hero-card-text"><strong>Real results</strong><span>Sustainable, feel-good transformation</span></div></div>
     </div>
@@ -241,7 +241,7 @@
         <p class="section-sub">At Fast Feast Fiesta, we believe fasting should feel empowering, joyful, and completely doable. No guilt. No extremes. Just a smarter way to nourish yourself.</p>
         <p style="margin-top:1rem; font-size:0.95rem; color:var(--muted);">We combine evidence-based fasting protocols with a mindset-first approach — helping you build a way of eating that's sustainable for life, not just the next 30 days.</p>
         <div class="about-badges">
-          <span class="badge flag">🏅 FLAG Certified Coach</span>
+          <span class="badge flag">✓ FLAG Certified Coach</span>
           <span class="badge">Intermittent fasting</span>
           <span class="badge">Extended fasting</span>
           <span class="badge">Intuitive eating</span>
@@ -255,7 +255,7 @@
         <div class="stat-card highlight"><div class="stat-num">93%</div><div class="stat-label">Report lasting results</div></div>
         <div class="stat-card"><div class="stat-num">5★</div><div class="stat-label">Average rating</div></div>
         <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Years experience</div></div>
-        <div class="stat-wide"><div><div class="stat-num">🏅</div></div><div><div class="stat-label" style="color:white;">FLAG Certified Coach — trained in women's hormonal health, cycle syncing &amp; fasting protocols built for the female body.</div></div></div>
+        <div class="stat-wide"><div style="flex-shrink:0;"><img src="FLAG_CERTIFIED_MARK.png" alt="FLAG Certified" style="width:48px; height:48px; object-fit:contain;"></div><div><div class="stat-label" style="color:white;">FLAG Certified Coach — trained in women's hormonal health, cycle syncing &amp; fasting protocols built for the female body.</div></div></div>
       </div>
     </div>
   </div>
@@ -264,9 +264,7 @@
 <section id="flag-cert">
   <div class="flag-inner">
     <div class="flag-badge-wrap">
-      <div class="flag-badge">🏅</div>
-      <div class="flag-badge-title">FLAG Certified</div>
-      <div class="flag-badge-sub">Fasting Like A Girl</div>
+      <img src="FLAG_CERTIFIED_MARK.png" alt="Fast Like A Girl Certified Coach Badge">
     </div>
     <div>
       <span class="section-label">Why certification matters</span>
